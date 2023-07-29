@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>{{ title }}</title>
+    </head>
+    <body>
+        <h1>Hello, {{name}}!</h1>
+        <h1>
+                {% if name in users %}
+                    Your age is {{users[name]['age']}}, you are from {{users[name]['country']}}
+                {% else %}
+                    We don't have information about you!
+                {% endif %}
+
+        </h1>
+        The time is {{time}}.
+    </body>
+</html>
